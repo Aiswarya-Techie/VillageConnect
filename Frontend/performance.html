@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VillageConnect - Performance Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🏡 VillageConnect</div>
+    <a href="index.html" class="nav-link">← Home</a>
+  </nav>
+
+  <div class="hero">
+    <h1>📊 Public Performance Board</h1>
+    <p>Transparent officer performance — visible to all citizens</p>
+  </div>
+
+  <div class="container" style="display:block; max-width:1100px;">
+    <div class="stats-row" id="overall-stats">
+      <div class="stat-card">
+        <h3 id="total-complaints">0</h3>
+        <p>Total Complaints</p>
+      </div>
+      <div class="stat-card resolved">
+        <h3 id="total-resolved">0</h3>
+        <p>Resolved</p>
+      </div>
+      <div class="stat-card pending">
+        <h3 id="total-pending">0</h3>
+        <p>Pending</p>
+      </div>
+      <div class="stat-card" style="border-top-color:#e74c3c">
+        <h3 id="total-escalated">0</h3>
+        <p>Escalated</p>
+      </div>
+    </div>
+
+    <h2 style="margin:30px 0 15px; color:#1a6b3c;">🏆 Officer Performance Leaderboard</h2>
+    <div id="officer-board"></div>
+
+    <h2 style="margin:30px 0 15px; color:#1a6b3c;">📋 Recent Complaints (Public)</h2>
+    <div id="public-complaints"></div>
+  </div>
+
+  <script src="performance.js"></script>
+</body>
+</html>

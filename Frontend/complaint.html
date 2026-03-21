@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VillageConnect - Submit Complaint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🏡 VillageConnect</div>
+    <div class="nav-links">
+      <span id="citizen-name" class="nav-link">👤 Loading...</span>
+      <a href="mystatus.html" class="nav-link">My Complaints</a>
+      <a href="#" onclick="logout()" class="admin-btn">Logout</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Submit a Complaint</h1>
+    <p>Describe your issue and our AI will categorize and route it automatically</p>
+  </div>
+
+  <div class="container">
+    <div class="form-card">
+      <h2>New Complaint</h2>
+      <div class="form-group">
+        <label>Describe the Issue in Detail</label>
+        <textarea id="description" rows="5" placeholder="Example: The road near the temple has a large pothole causing accidents..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Upload Photo (optional)</label>
+        <input type="file" id="photo" accept="image/*">
+      </div>
+      <div id="ai-result" class="ai-result hidden">
+        🤖 AI Category Detected: <strong id="category-text"></strong>
+      </div>
+      <button onclick="submitComplaint()" class="submit-btn" id="submitBtn">
+        🚀 Submit Complaint
+      </button>
+      <div id="success-msg" class="success-msg hidden">
+        ✅ Complaint submitted! Assigned to Sarpanch. Track it in "My Complaints".
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3>📋 Escalation Timeline</h3>
+      <div class="step">
+        <span class="step-num" style="background:#27ae60">1</span>
+        <div><strong>Sarpanch</strong><p>Days 0–7</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num" style="background:#f39c12">2</span>
+        <div><strong>Mandal Officer</strong><p>Days 7–14</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num" style="background:#e67e22">3</span>
+        <div><strong>MLA</strong><p>Days 14–21</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num" style="background:#e74c3c">4</span>
+        <div><strong>District Collector</strong><p>Days 21+</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
