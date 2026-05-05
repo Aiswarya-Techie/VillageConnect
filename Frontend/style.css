@@ -1,3 +1,100 @@
+/* ============================================
+   12-COLUMN RESPONSIVE GRID SYSTEM
+   VillageConnect - Works on all devices
+   ============================================ */
+
+/* Reset and Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+/* All columns base */
+[class*="col-"] {
+  padding: 0 15px;
+  width: 100%;
+}
+
+/* ── DESKTOP (1200px and above) ── */
+@media (min-width: 1200px) {
+  .col-1  { width: 8.333%; }
+  .col-2  { width: 16.666%; }
+  .col-3  { width: 25%; }
+  .col-4  { width: 33.333%; }
+  .col-5  { width: 41.666%; }
+  .col-6  { width: 50%; }
+  .col-7  { width: 58.333%; }
+  .col-8  { width: 66.666%; }
+  .col-9  { width: 75%; }
+  .col-10 { width: 83.333%; }
+  .col-11 { width: 91.666%; }
+  .col-12 { width: 100%; }
+}
+
+/* ── TABLET (768px - 1199px) ── */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .col-md-1  { width: 8.333%; }
+  .col-md-2  { width: 16.666%; }
+  .col-md-3  { width: 25%; }
+  .col-md-4  { width: 33.333%; }
+  .col-md-5  { width: 41.666%; }
+  .col-md-6  { width: 50%; }
+  .col-md-7  { width: 58.333%; }
+  .col-md-8  { width: 66.666%; }
+  .col-md-9  { width: 75%; }
+  .col-md-10 { width: 83.333%; }
+  .col-md-11 { width: 91.666%; }
+  .col-md-12 { width: 100%; }
+}
+
+/* ── MOBILE (below 768px) ── */
+@media (max-width: 767px) {
+  .col-sm-1  { width: 8.333%; }
+  .col-sm-2  { width: 16.666%; }
+  .col-sm-3  { width: 25%; }
+  .col-sm-4  { width: 33.333%; }
+  .col-sm-5  { width: 41.666%; }
+  .col-sm-6  { width: 50%; }
+  .col-sm-7  { width: 58.333%; }
+  .col-sm-8  { width: 66.666%; }
+  .col-sm-9  { width: 75%; }
+  .col-sm-10 { width: 83.333%; }
+  .col-sm-11 { width: 91.666%; }
+  .col-sm-12 { width: 100%; }
+
+  /* Mobile fixes */
+  .hide-mobile { display: none !important; }
+  .container { padding: 0 10px; }
+  .row { margin: 0 -10px; }
+  [class*="col-"] { padding: 0 10px; }
+}
+
+/* ── SMALL MOBILE (below 480px) ── */
+@media (max-width: 480px) {
+  .col-xs-12 { width: 100% !important; }
+  html { font-size: 14px; }
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #333; }
 
