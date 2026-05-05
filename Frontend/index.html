@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VillageConnect - Smart Village Governance</title>
   <link rel="stylesheet" href="style.css">
+  <head>
+  <!-- Already existing stuff stays here -->
+
+  <!-- ADD THESE 3 LINES -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1A7A4A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" 
+        content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VillageConnect">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+</head>
 </head>
 <body>
   <nav class="navbar">
@@ -76,5 +89,42 @@
       </div>
     </div>
   </div>
+  <!-- ADD THIS before </body> -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((reg) => console.log('Service Worker registered!', reg))
+          .catch((err) => console.log('Service Worker failed:', err));
+      });
+    }
+  </script>
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917989686975?text=Hello%20VillageConnect!%20I%20want%20to%20report%20an%20issue." 
+   target="_blank"
+   id="whatsapp-btn"
+   style="
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    border-radius: 50px;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+    transition: transform 0.2s;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       width="28" height="28"/>
+  Contact Us
+</a>
+
+</body>
 </body>
 </html>
